@@ -250,3 +250,16 @@ snippet unim "unimplemented!()"
 	unimplemented!()
 snippet use "use ...;" b
 	use ${1:std::$2};
+snippet use serde "use serde"
+	use serde::{Deserialize, Serialize};
+
+	#[derive(Serialize, Deserialize${1:, Debug})]
+	${2:pub} ${3:struct} $4 {
+		$5
+	}
+
+snippet serde "serde struct"
+	#[derive(Serialize, Deserialize${1:, Debug})]
+	${2:pub} ${3:struct} $4 {
+		$5
+	}
