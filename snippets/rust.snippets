@@ -263,3 +263,6 @@ snippet serdestruct "serde struct"
 	${2:pub} ${3:struct} $4 {
 		$5
 	}
+
+snippet typeresult "Declare dynamic result"
+	type Result<T> = std::result::Result<T, Box<dyn std::error::Error>>;
