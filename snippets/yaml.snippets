@@ -1,0 +1,14 @@
+snippet githubaction "Github action boilerplate"
+	name: ${1:Title}
+
+	on: ${2:[push, pull_request]}
+
+	jobs:
+		deploy:
+
+		runs-on: ubuntu-latest
+
+		steps:
+		- uses: actions/checkout@v2
+
+		${3}
